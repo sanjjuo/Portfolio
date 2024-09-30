@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+.custom-font {
+  font-family: "Outfit", sans-serif;
+}
+
+
+.clip-circle {
+  clip-path: circle(49%);
+}
+
+.clip-circle2 {
+  clip-path: circle(56%);
+}
