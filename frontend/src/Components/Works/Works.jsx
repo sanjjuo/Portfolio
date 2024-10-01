@@ -9,11 +9,24 @@ import { motion } from "framer-motion";
 const Works = () => {
     const [open, setOpen] = React.useState(false);
     const [detail, setDetail] = useState([])
+    const [work, setWork] = useState("all")
+    const [filter, setFilter] = useState(works)
 
     const handleOpen = (d) => {
         setOpen(!open);
         console.log(d);
         setDetail(d)
+    }
+
+    const handleFilter = (category) => {
+        setWork(category);
+        console.log(category);
+        if (category === "all") {
+            setFilter(works)
+        } else {
+            const filterData = works.filter(product => product.category === category)
+            setFilter(filterData)
+        }
     }
     return (
         <>
@@ -26,10 +39,21 @@ const Works = () => {
                         <li className='h-[3px] bg-gray-800 w-5 rounded-full'></li>
                         <li className='h-[3px] bg-gray-800 w-2 rounded-full'></li>
                     </ul>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-20">
-                        {works.map((item, index) => (
+                    <ul className='flex items-center justify-center mt-10 gap-1 lg:gap-2'>
+                        <li className={`${work === "all" ? "bg-black text-white dark:bg-white dark:text-black" : "border-black"} text-[12px] lg:text-sm font-bold uppercase tracking-wider border-[1px] border-black rounded-none p-2 lg:px-5 lg:py-2 hover:bg-black
+                         hover:text-white cursor-pointer dark:border-white dark:hover:bg-white dark:hover:text-black`} onClick={() => handleFilter("all")}>All</li>
+                        <li className={`${work === "full-stack" ? "bg-black text-white dark:bg-white dark:text-black" : "border-black"} text-[12px] lg:text-sm font-bold uppercase tracking-wider border-[1px] border-black rounded-none p-2 lg:px-5 lg:py-2 hover:bg-black
+                         hover:text-white cursor-pointer dark:border-white dark:hover:bg-white dark:hover:text-black`} onClick={() => handleFilter("full-stack")}>Full-Stack</li>
+                        <li className={`${work === "frontend" ? "bg-black text-white dark:bg-white dark:text-black" : "border-black"} text-[12px] lg:text-sm font-bold uppercase tracking-wider border-[1px] border-black rounded-none p-2 lg:px-5 lg:py-2 hover:bg-black
+                         hover:text-white cursor-pointer dark:border-white dark:hover:bg-white dark:hover:text-black`} onClick={() => handleFilter("frontend")}>Frontend</li>
+                        <li className={`${work === "app" ? "bg-black text-white dark:bg-white dark:text-black" : "border-black"} text-[12px] lg:text-sm font-bold uppercase tracking-wider border-[1px] border-black rounded-none p-2 lg:px-5 lg:py-2 hover:bg-black
+                         hover:text-white cursor-pointer dark:border-white dark:hover:bg-white dark:hover:text-black`} onClick={() => handleFilter("app")}>Mobile Apps</li>
+                    </ul>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
+                        {filter.map((item, index) => (
                             <motion.div key={index}
-                            className='lg:col-span-1'
+                                className='lg:col-span-1'
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}>

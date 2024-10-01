@@ -42,25 +42,27 @@ const Home = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5 }}
                                 className='text-3xl font-bold mb-5'>
-                                    <TextTransition inline={true} springConfig={presets.wobbly}>{TEXTS[text % TEXTS.length]}</TextTransition>
-                                </motion.p>
+                                <TextTransition inline={true} springConfig={presets.wobbly}>{TEXTS[text % TEXTS.length]}</TextTransition>
+                            </motion.p>
                             <div className='flex items-center gap-2'>
-                                <motion.button
+                                <motion.a
+                                    href='#contact'
                                     initial={{ opacity: 0, scale: 0 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.9 }}>
                                     <Button className='bg-black text-white tracking-widest font-light text-sm
                                         border-[1px] border-black rounded-3xl w-48 hover:bg-transparent hover:text-black dark:bg-white dark:border-white dark:text-black
-                                        dark:hover:bg-black dark:hover:text-white custom-font'>Contact me</Button>
-                                </motion.button>
-                                <motion.button
+                                        dark:hover:bg-black dark:hover:text-white custom-font'>Hire Me</Button>
+                                </motion.a>
+                                <motion.a
+                                    href='#works'
                                     initial={{ opacity: 0, scale: 0 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.9 }}>
                                     <Button className='bg-transparent text-black tracking-widest font-light text-sm
                                     border-[1px] border-black rounded-3xl w-48 hover:bg-black hover:text-white dark:border-white dark:text-white
-                                    dark:hover:bg-white dark:hover:text-black custom-font'>Hire me</Button>
-                                </motion.button>
+                                    dark:hover:bg-white dark:hover:text-black custom-font'>My Works</Button>
+                                </motion.a>
                             </div>
                             <ul className='flex items-center gap-4 mt-7'>
                                 <motion.li
@@ -136,23 +138,27 @@ const Home = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
                             className='text-2xl font-bold mb-5 text-gray-100'>
-                                React.js Developer
-                            </motion.p>
+                            React.js Developer
+                        </motion.p>
                         <div className='flex items-center gap-2'>
-                            <motion.button initial={{ opacity: 0, scale: 0 }}
+                            <motion.a
+                                href='#contact'
+                                initial={{ opacity: 0, scale: 0 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.9 }}>
                                 <Button className='bg-black text-white tracking-widest font-light text-sm
-                                        border-[1px] border-black rounded-3xl w-36 p-3 hover:bg-transparent hover:text-black dark:border-white dark:text-white
-                                        dark:hover:bg-white dark:hover:text-black custom-font'>Contact me</Button>
-                            </motion.button>
-                            <motion.button initial={{ opacity: 0, scale: 0 }}
+                                        border-[1px] border-black rounded-3xl w-36 hover:bg-transparent hover:text-black dark:bg-white dark:border-white dark:text-black
+                                        dark:hover:bg-black dark:hover:text-white custom-font'>Hire Me</Button>
+                            </motion.a>
+                            <motion.a
+                                href='#works'
+                                initial={{ opacity: 0, scale: 0 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.9 }}>
                                 <Button className='bg-transparent text-black tracking-widest font-light text-sm
-                                    border-[1px] border-black rounded-3xl w-36 p-3 hover:bg-black hover:text-white dark:border-white dark:text-white
-                                    dark:hover:bg-white dark:hover:text-black custom-font'>Hire me</Button>
-                            </motion.button>
+                                    border-[1px] border-black rounded-3xl w-36 hover:bg-black hover:text-white dark:border-white dark:text-white
+                                    dark:hover:bg-white dark:hover:text-black custom-font'>My Works</Button>
+                            </motion.a>
                         </div>
                         <ul className='flex items-center gap-4 mt-5'>
                             <motion.li

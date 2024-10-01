@@ -4,80 +4,73 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import DarkMode from '../../DarkMode';
 import SideBar from './SideBar';
 import MyWhatsapp from '../Whatsapp/Whatsapp';
-import ScrollToTop from '../ScrollTop/ScrollTop';
 
 const NavList = () => {
     const [nav, setNav] = useState("home")
-    const handleScroll = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }   
-    };
     return (
         <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
             <Typography
                 as="li"
                 className="p-1 font-medium text-[15px] tracking-widest"
             >
-                <span onClick={() => handleScroll("home")} className="flex flex-col items-center text-gray-700 hover:text-black transition duration-500 transform 
-             scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700 cursor-pointer">
+                <a href="#home" onClick={() => setNav("Home")} className="flex flex-col items-center text-gray-700 hover:text-black transition duration-500 transform 
+                 scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700">
                     Home
-                </span>
+                </a>
             </Typography>
             <Typography
                 as="li"
                 className="p-1 font-medium text-[15px] tracking-widest"
             >
-                <span onClick={() => handleScroll("about")} className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
-             scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700 cursor-pointer">
+                <a href="#about" className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
+                 scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700">
                     About
-                </span>
+                </a>
             </Typography>
             <Typography
                 as="li"
                 className="p-1 font-medium text-[15px] tracking-widest"
             >
-                <span onClick={() => handleScroll("skills")} className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
-             scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700 cursor-pointer">
+                <a href="#skills" className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
+                 scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700">
                     Skills
-                </span>
+                </a>
             </Typography>
             <Typography
                 as="li"
                 className="p-1 font-medium text-[15px] tracking-widest"
             >
-                <span onClick={() => handleScroll("resume")} className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
-             scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700 cursor-pointer">
+                <a href="#resume" className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
+                 scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700">
                     Resume
-                </span>
+                </a>
             </Typography>
             <Typography
                 as="li"
                 className="p-1 font-medium text-[15px] tracking-widest"
             >
-                <span onClick={() => handleScroll("services")} className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
-             scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700 cursor-pointer">
+                <a href="#services" className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
+                 scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700">
                     Services
-                </span>
+                </a>
             </Typography>
             <Typography
                 as="li"
                 className="p-1 font-medium text-[15px] tracking-widest"
             >
-                <span onClick={() => handleScroll("works")} className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
-             scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700 cursor-pointer">
+                <a href="#works" className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
+                 scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700">
                     Works
-                </span>
+                </a>
             </Typography>
             <Typography
                 as="li"
                 className="p-1 font-medium text-[15px] tracking-widest"
             >
-                <span onClick={() => handleScroll("contact")} className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
-             scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700 cursor-pointer">
+                <a href="#contact" className="flex items-center text-gray-700 hover:text-black transition duration-500 transform 
+                 scale-100 hover:scale-110 dark:text-white dark:hover:text-gray-700">
                     Contact
-                </span>
+                </a>
             </Typography>
         </ul>
     );
@@ -158,11 +151,9 @@ const AppNavbar = () => {
                         <NavList />
                     </Collapse>
                 </Navbar>
-                <div className='fixed bottom-28 right-5 z-50'>
-                    <ScrollToTop/>
-                </div>
+
                 <div>
-                    <MyWhatsapp />
+                    <MyWhatsapp/>
                 </div>
             </section>
 

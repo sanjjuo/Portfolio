@@ -140,6 +140,7 @@ export const works = [
     {
         id: "1",
         name: "Vinticars",
+        category:"frontend",
         image: "p1.png",
         description: "A Frontend Website for the Selling of Vintage Classic Cars",
         link: "https://github.com/sanjjuo/Vinticars",
@@ -148,6 +149,7 @@ export const works = [
     {
         id: "2",
         name: "Voltify",
+        category:"frontend",
         image: "p2.png",
         description: "Developed a electronics and gadgets store website Frontend using the React.js.",
         link: "https://github.com/sanjjuo/Vinticars",
@@ -156,6 +158,7 @@ export const works = [
     {
         id: "3",
         name: "Urbancart",
+        category:"frontend",
         image: "p3.png",
         description: "A responsive React e-commerce frontend with dynamic product listings,smooth navigation, and an intuitive shopping cart for a seamless userexperience.",
         link: "https://github.com/sanjjuo/Urbancart",
@@ -164,6 +167,7 @@ export const works = [
     {
         id: "4",
         name: "smartbank",
+        category:"full-stack",
         image: "p6.png",
         description: "Developed a banking website using the MERN stack, featuring secure transactions, account management, and an admin panel for overseeinguser activities.",
         link: "https://github.com/sanjjuo/smartBank",
@@ -172,6 +176,7 @@ export const works = [
     {
         id: "5",
         name: "Tomato",
+        category:"full-stack",
         image: "/p4.png",
         description: "A food delivery website lets users browse restaurants, place orders, and pay online,with features like order tracking, user accounts, and promotions. It’s built using React.js for the frontend and Node.js with a database like MongoDB for efficient order management",
         link: "https://github.com/sanjjuo/Food-delivery-website",
@@ -180,6 +185,7 @@ export const works = [
     {
         id: "6",
         name: "Olympia gym fitness",
+        category:"full-stack",
         image: "/p5.png",
         description: "A gym website allows users to view class schedules, book sessions, and manage memberships online. It features workout plans, trainer profiles, and integrates payment options for a seamless fitness experience.",
         link: "https://github.com/sanjjuo/Gym-Website",
@@ -188,6 +194,7 @@ export const works = [
     {
         id: "7",
         name: "Petogon",
+        category:"app",
         image: "p7.png",
         description: "Developed a React Native app for pet adoption, utilizing Firebase asthe backend. User authentication via Google login (Clerk method). Pet owner chat functionality for adoption inquiries are also included.",
         link: "https://github.com/sanjjuo/Petogon",
@@ -196,6 +203,7 @@ export const works = [
     {
         id: "8",
         name: "Netflix Clone",
+        category:"frontend",
         image: "p8.png",
         description: "Developed a Simple React Frontend Netflix clone Website.",
         link: "https://github.com/sanjjuo/Netflix",

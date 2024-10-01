@@ -91,13 +91,16 @@ const About = () => {
                                 </li>
                             </ul>
                             <div className='flex justify-center lg:justify-start'>
-                                <motion.button initial={{ opacity: 0, scale: 0 }}
+                                <motion.a
+                                    href='/resume.pdf'
+                                    download="MohamedSanjeed_CV.pdf"
+                                    initial={{ opacity: 0, scale: 0 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.9 }}>
                                     <Button className='flex items-center gap-2 justify-center bg-transparent text-black tracking-widest font-normal text-sm
                             border-[1px] border-black rounded-3xl w-52 hover:bg-black hover:text-white dark:border-white dark:text-white
                             dark:hover:bg-white dark:hover:text-black custom-font'>Download Cv <FaDownload /></Button>
-                                </motion.button>
+                                </motion.a>
                             </div>
                         </div>
                     </div>

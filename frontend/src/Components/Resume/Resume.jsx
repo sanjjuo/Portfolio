@@ -16,7 +16,7 @@ const Resume = () => {
                         <li className='h-[3px] bg-gray-800 w-5 rounded-full'></li>
                         <li className='h-[3px] bg-gray-800 w-2 rounded-full'></li>
                     </ul>
-                    <ul className='flex justify-center items-center gap-5 lg:gap-10 mt-10'>
+                    <ul className='flex justify-center items-center gap-2 mt-10'>
                         <motion.li
                             initial={{ opacity: 0, scale: 0 }}
                             whileInView={{ opacity: 1, scale: 1 }}
